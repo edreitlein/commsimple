@@ -1,0 +1,3 @@
+Change topBar to use cookies instead of php session
+
+passwords should be hashed
