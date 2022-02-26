@@ -3,7 +3,7 @@
         <style>
             .commericalsimpleheader {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 30% 40% 30%;
             grid-template-rows: auto;
             
             background-color: gray;
@@ -63,7 +63,7 @@
         <div class="commericalsimpleheader">
             <div id="leftdiv">Drop Down Menu</div>
             <div id="middlediv">Commerical Simple</div>
-            <div id="rightdiv">Login/Signup/<font COLOR="red"><b>Upload Listing</b></font></div><!-- make these href once login signup and upload is finished -->
+            <div id="rightdiv"><a href = "./login.php">Login</a>/<a href = "./createUserFrontend.php">Sign Up</a>/<font COLOR="red"><b>Upload Listing</b></font></div><!-- make these href once login signup and upload is finished -->
             
         </div>
     </body>

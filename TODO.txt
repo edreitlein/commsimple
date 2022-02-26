@@ -1,3 +1,9 @@
-Change topBar to use cookies instead of php session
+Change topBar to use cookies instead of php session?
 
 passwords should be hashed
+
+get google login working
+
+make the "createUserBackend" which takes email from createUserFrontend.php and checks if account exists, if not creates an account
+
+change createUserFronted javascript to not allow blank entries

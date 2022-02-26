@@ -30,7 +30,7 @@
             
         <form action="./tryLogin.php", method="POST" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
             <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Log In</label>
-            <input type="text" name="email" placeholder="Email"><br>
+            <input type="email" name="email" placeholder="Email"><br>
             <input type="text" name="password" placeholder="Password"><br>
             <input type="submit" name="submit" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
         </form>
