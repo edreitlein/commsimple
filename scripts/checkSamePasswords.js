@@ -8,7 +8,7 @@ function check(){
         document.getElementById("createAccount").submit();
 
     } else {
-        alert("not the same");
+        alert("Passwords are not the same!");
         // do something if the first input is less than the second
     }
 }
