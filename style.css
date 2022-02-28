@@ -1,0 +1,88 @@
+.highlight {
+  color: #fa804c;
+}
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+.navbar-nav {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-banner {
+  background-color: #fff9f4;
+}
+
+.title {
+  margin-top: 80px;
+}
+
+.title h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 65px;
+}
+.main-btn {
+  background-color: #3d4ff3;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  font-weight: normal;
+}
+
+.keds,
+.shoes,
+.info-creative {
+  margin-top: 50px;
+}
+
+
+.card {
+  border-radius: 15px;
+  box-shadow: 5px 6px 15px grey;
+}
+.card-img-top {
+  height: 300px;
+  border: 18px solid white;
+  background-color: #f1f1f1;
+  border-radius: 35px;
+}
+
+.info-body {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 6px 15px grey;
+}
+
+.creative {
+  padding-top: 90px;
+}
+
+footer {
+  margin-top: 10px;
+  background-color: #fa804c;
+  color: white;
+  padding: 10px 0px 10px 0px;
+}
+
+@media (max-width: 576px) {
+  .title {
+    margin-top: 30px;
+    position: absolute;
+  }
+  .banner-image {
+    margin-top: 300px;
+  }
+  .creative {
+    position: absolute;
+    padding-top: 0px;
+  }
+  .info {
+    margin-top: 300px;
+    text-align: center;
+  }
+}
