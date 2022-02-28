@@ -34,7 +34,7 @@
             <input type="text" name="password" placeholder="Password"><br>
             <input type="submit" name="submit" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
         </form>
-        <a href="./createUserFront.php" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Create a New Account</a>
+        <a href="./createUserFrontend.php" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Create a New Account</a>
         </div>
     </body>
 
