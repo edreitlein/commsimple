@@ -9,3 +9,5 @@ make the "createUserBackend" which takes email from createUserFrontend.php and c
 change createUserFronted javascript to not allow blank entries
 
 sanitize inputs from input boxes, specifically account creation
+
+change topBar.php to only do the maintaining login code
