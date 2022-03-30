@@ -23,7 +23,7 @@ if($users->num_rows>0){
             $_SESSION["firstName"]=$row["firstName"];
             $_SESSION["lastName"]=$row["lastName"];
 
-            header('Location: ./createUserBackend.php');
+            header('Location: ./tempsuccess.html');
             
         }
         
