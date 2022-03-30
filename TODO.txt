@@ -1,3 +1,7 @@
+Add to checkSamePasswords.js to check if account creation is completely filled out (all info present?)
+
+    add something to notify user account was created : send them to another page saying "account created?"
+
 Change topBar to use cookies instead of php session?
 
 passwords should be hashed

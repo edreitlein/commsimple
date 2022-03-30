@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 ?>
 <html>
@@ -19,10 +20,18 @@
     </header>
     <script src="./scripts/checkSamePasswords.js"></script>
     <body>
+        
         <div class="createUserForm">
+        <?php
+                if (($_SESSION["emailAlreadyExists"])==true){
+                    echo "<p style='text-align:center'>Account creation failed! Email already registered!</p>";
+                }
+
+            ?>
             <form action="./createUserBackend.php", id='createAccount' method="POST" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
                 <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Create Account</label>
-                <input type="name" name="name" placeholder="Name"><br>
+                <input type="text" name="firstName" placeholder="First Name"><br>
+                <input type="text" name="lastName" placeholder="Last Name"><br>
                 <input type="email" name="email" placeholder="Email"><br>
                 <input type="text" name="password" placeholder="Password" id='pass1'><br>
                 <input type="text" name="confirmpassword" placeholder="Confirm Password" id='pass2'><br>

@@ -20,4 +20,6 @@ if($mysqli ->connect_error){//access database and load into $mysqli
     echo 'Error: '.$mysqli->connect_error;
     exit();
 }
+
+
 ?>
