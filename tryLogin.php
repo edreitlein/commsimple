@@ -20,7 +20,8 @@ if($users->num_rows>0){
             
             $_SESSION["loggedIn"]=true;
             $_SESSION["email"]=$row["email"];
-            $_SESSION["name"]=$row["name"];
+            $_SESSION["firstName"]=$row["firstName"];
+            $_SESSION["lastName"]=$row["lastName"];
 
             header('Location: ./createUserBackend.php');
             

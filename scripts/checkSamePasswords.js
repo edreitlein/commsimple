@@ -12,3 +12,4 @@ function check(){
         // do something if the first input is less than the second
     }
 }
+
