@@ -30,9 +30,9 @@ session_start();
             ?>
             <form action="./createUserBackend.php", id='createAccount' method="POST" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
                 <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Create Account</label>
-                <input type="text" name="firstName" placeholder="First Name"><br>
-                <input type="text" name="lastName" placeholder="Last Name"><br>
-                <input type="email" name="email" placeholder="Email"><br>
+                <input type="text" name="firstName" placeholder="First Name" id='firstName'><br>
+                <input type="text" name="lastName" placeholder="Last Name" id='lastName'><br>
+                <input type="email" name="email" placeholder="Email" id='email' required="required"><br>
                 <input type="text" name="password" placeholder="Password" id='pass1'><br>
                 <input type="text" name="confirmpassword" placeholder="Confirm Password" id='pass2'><br>
                 <input type="button" name="submitButton" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" 

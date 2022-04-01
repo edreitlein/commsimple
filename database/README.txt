@@ -12,4 +12,4 @@ To import the database to your own computer, follow these steps
 
 5. in the main area, click "Choose File", then select commsimple.sql from where you downloaded it
 
-6. click "Go", you should see many green check marks and text. restart MAMP and go to localhost/commsimple/home.html, try logging in with "edreitlein@drew.edu" and "1234"
+6. click "Go", you should see many green check marks and text. restart MAMP and go to localhost/commsimple/home.php, try logging in with "edreitlein@drew.edu" and "1234"

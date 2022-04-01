@@ -1,59 +1,8 @@
-<?php include "./topBar.php" ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php include './commSimpleHeader.php' ?>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Outwryd</title>
-</head>
-
-<body>
-    <main>
-        <section class="nav-banner ">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container-fluid">
-                         <!-- Where is store search to user -->
-                        <a class="navbar-brand" href="#main_home"> <img src="assets/logo.PNG" width="55"
-                                class="pb-1 mx-2"><span class="highlight" class="px-1">OUTWRYD</span>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse flex-md-row-reverse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item px-3">
-                                    <!-- official website login to user -->
-                                    <!-- I might be able to change this so that the styling still works but it displays you are logged in with a php if statement -->
-                                    <!-- i think i need to change topBar.php to only include the maintaining login code -->
-                                    <a class="nav-link" aria-current="page" href="login.php">login</a>
-                                </li>
-                                <li class="nav-item px-3">
-                                    <!-- history to clint -->
-                                    <a class="nav-link" href="">About us</a>
-                                </li>
-                                <li class="nav-item px-3">
-                                    <!-- connect to us by email -->
-                                    <a class="nav-link" href="">Contact us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                    <!-- above this is the header which can be replaced when testHeader functions -->
+                    <!-- if including commSimpleHeader in other areas stops working, try removing stuff from commSimple header and adding it here-->
+                    <!-- or if including commSimpleHeader messes up the way other things look -->
 
                 <div class="banner">
                     <div class="row">
@@ -103,7 +52,7 @@
                                     font-weight: 700;">$</h4>
 
 
-                                <button class="btn main-btn" onclick="location.href=''" type="button"><img src="shopping-cart 1.png" width="20"
+                                <button class="btn main-btn" onclick="location.href=''" type="button"><img src="assets/shopping-cart 1.png" width="20"
                                         class="mx-1">Reservation
                                     NOW</button>
                             </div>
@@ -123,7 +72,7 @@
                                 <h4 class="highlight flex-fill" style="font-size: 28px;
                                 font-weight: 700;">$</h4>
 
-                                <button class="btn main-btn" onclick="location.href=''" type="button"><img src="shopping-cart 1.png" width="20"
+                                <button class="btn main-btn" onclick="location.href=''" type="button"><img src="assets/shopping-cart 1.png" width="20"
                                         class="mx-1">Reservation NOW
                                 </button>
                             </div>

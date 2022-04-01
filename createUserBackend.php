@@ -44,7 +44,7 @@ if((checkUniqueUser($_POST['email'],$mysqli))==true){
     $stmd = $mysqli->prepare($insertQuery);
     $stmd->bind_param("ssss",$_POST["firstName"],$_POST["lastName"],$_POST["email"],$_POST['password']);
     if($stmd->execute()){
-       header('Location: ./home.html');
+       header('Location: ./accountcreated.php');
 
     }else{
         echo "<br>Failed to insert<br>Contact local admin<br>";

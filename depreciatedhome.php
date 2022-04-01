@@ -38,6 +38,8 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item px-3">
                                     <!-- official website login to user -->
+                                    <!-- I might be able to change this so that the styling still works but it displays you are logged in with a php if statement -->
+                                    <!-- i think i need to change topBar.php to only include the maintaining login code -->
                                     <a class="nav-link" aria-current="page" href="login.php">login</a>
                                 </li>
                                 <li class="nav-item px-3">
