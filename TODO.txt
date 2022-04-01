@@ -1,4 +1,4 @@
-Add to checkSamePasswords.js to check if account creation is completely filled out (all info present?)
+✅Add to checkSamePasswords.js to check if account creation is completely filled out (all info present?)
 
     add something to notify user account was created : send them to another page saying "account created?"
 
@@ -8,10 +8,10 @@ passwords should be hashed
 
 get google login working
 
-make the "createUserBackend" which takes email from createUserFrontend.php and checks if account exists, if not creates an account
+✅make the "createUserBackend" which takes email from createUserFrontend.php and checks if account exists, if not creates an account
 
-change createUserFronted javascript to not allow blank entries
+✅change createUserFronted javascript to not allow blank entries
 
-sanitize inputs from input boxes, specifically account creation
+✅sanitize inputs from input boxes, specifically account creation
 
-change topBar.php to only do the maintaining login code
+✅change topBar.php to only do the maintaining login code
