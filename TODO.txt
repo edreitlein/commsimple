@@ -4,7 +4,8 @@
 
 Change topBar to use cookies instead of php session?
 
-passwords should be hashed
+❗passwords should be hashed
+❗database password should be changed before deployment and not committed publicly
 
 get google login working
 
@@ -24,6 +25,9 @@ delete phpinfo.php before deployment
 
 add links to userinfo.php, uploadListing.php
 
+check if a property being listed already exists at that address
+    stop duplicate listings 
+
 
 
 Add 
@@ -32,4 +36,7 @@ Add
     $mysqli->close();
     ?>
 to all places where a sql query is done
+
+
+Add userInfo for display on listings so users can contact creators of listings
 

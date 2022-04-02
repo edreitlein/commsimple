@@ -1,8 +1,8 @@
 <?php
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// these are debugging settings, enable them to begin debugging this page
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 
 include "./databaseInit.php";
@@ -30,30 +30,55 @@ if($_SESSION['loggedIn']!=true){
 
 
 if($_POST["submit"]==true){         //when submit button is pressed
-    echo '<script type="text/javascript">
-        alert("good to submit");
-        </script>';
+    // echo '<script type="text/javascript">
+    //     alert("good to submit");
+    //     </script>';
     //                                     int        text         text        text        text            text    longtext
     $insertQuery = "INSERT INTO listings (user_id,addressStreet,addressCity,addressState,addressZipcode,saleType,description) VALUES (?,?,?,?,?,?,?)";//may have to work with current_timestamp
     $stmd = $mysqli->prepare($insertQuery);
     $stmd->bind_param("issssss",$_SESSION['user_id'],$_POST["addressStreet"],$_POST["addressCity"],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description']);
-    // if($stmd->execute()){ removed for testing
-    //     echo '<script>alert("listing uploaded!")</script>';
-    // //    header('Location: ./home.php');
+    if($stmd->execute()){ //removed for testing
+        echo '<script>alert("listing uploaded!")</script>';
+    //    header('Location: ./home.php'); // testing/depreciated
 
-    // }else{
-    //     echo "<br>Failed<br>Contact local admin<br>";
-    //     echo($stmd->error);
-    // }
+    }else{
+        echo "<br>Failed<br>Contact local admin<br>";
+        echo($stmd->error);
+    }
+
+    $getListingID="SELECT * FROM listings WHERE user_id=? AND addressStreet=? AND addressCity=? AND addressState=? AND addressZipcode=? AND saleType=? AND description=?";
+    //  AND addressCity=? AND addressState=? AND addressZipcode=? AND saleType=? AND description=?
+    $stmd=$mysqli->prepare($getListingID);
+    $stmd->bind_param('issssss',$_SESSION['user_id'],$_POST["addressStreet"],$_POST['addressCity'],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description']);
+    // ,$_POST["addressCity"],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description']
+    $stmd->execute();
+    $result=$stmd->get_result();
+    
+    while($row = $result->fetch_assoc()) {
+        echo('ListingID: '.$row["listingID"]);
+        $listingID=$row["listingID"];
+        
+        
+    }
 
 
+    // image upload processing
     $listingImages='./listingImages';
-
+    //moves files to their own directory based on listingID in listingImages directory
     foreach($_FILES['files']['error'] as $key=>$error){
         if($error==0){
-            $tmp_name = $_FILES['files']["tmp_name"][$key];
-            $name=basename($_FILES['files']['name'][$key]);
-            move_uploaded_file($tmp_name,"$listingImages/$name");
+            if(! is_dir("$listingImages/$listingID")){
+                mkdir("$listingImages/$listingID");
+                $tmp_name = $_FILES['files']["tmp_name"][$key];
+                $name=basename($_FILES['files']['name'][$key]);
+                move_uploaded_file($tmp_name,"$listingImages/$listingID/$name");
+            }else{
+                $tmp_name = $_FILES['files']["tmp_name"][$key];
+                $name=basename($_FILES['files']['name'][$key]);
+                move_uploaded_file($tmp_name,"$listingImages/$listingID/$name");
+
+            }
+            
 
 
         }else{
@@ -61,22 +86,22 @@ if($_POST["submit"]==true){         //when submit button is pressed
         }
     }
     
+    //testing code
+    // echo("<htlm><br></html>");
+    // echo(count($_FILES['files']['name']));
+    // $filesUploadedCount = count($_FILES['files']['name']);
+    // echo("<htlm><br></html>");
 
-    echo("<htlm><br></html>");
-    echo(count($_FILES['files']['name']));
-    $filesUploadedCount = count($_FILES['files']['name']);
-    echo("<htlm><br></html>");
+    // foreach($_FILES['files'] as $file){
+    //     var_dump($file)
+    // echo("<htlm><br></html>");
 
-    foreach($_FILES['files'] as $file){
-        var_dump($file);
-    echo("<htlm><br></html>");
+    // }
+    // foreach($_FILES['files']['name'] as $file){
+    //     var_dump($file);
+    // echo("<htlm><br></html>");
 
-    }
-    foreach($_FILES['files']['name'] as $file){
-        var_dump($file);
-    echo("<htlm><br></html>");
-
-    }
+    // }
 
 }
 ?>
