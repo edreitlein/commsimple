@@ -1,5 +1,10 @@
+<?php include "./commSimpleHeader.php" ?>
 <?php
 session_start();
+if($_SESSION['loggedIn']!=true){//redirect user if they are not logged in
+    header('Location: ./login.php');
+
+}
 ?>
 <html>
 <header>

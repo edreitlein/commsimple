@@ -15,3 +15,21 @@ get google login working
 ✅sanitize inputs from input boxes, specifically account creation
 
 ✅change topBar.php to only do the maintaining login code
+
+✅make user who is not signed in not able to view userInfo.php
+
+if a user is signed in they should not be able to view createUserFrontend.php
+
+delete phpinfo.php before deployment
+
+add links to userinfo.php, uploadListing.php
+
+
+
+Add 
+    <?php
+    $stmd->close();
+    $mysqli->close();
+    ?>
+to all places where a sql query is done
+

@@ -66,3 +66,7 @@ session_start();
                         </div>
                     </div>
                 </nav>
+                                </div>
+                                </section>
+                                </main>
+                                </body>
