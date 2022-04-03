@@ -13,7 +13,21 @@
                 </div>
             </div>
         </section>
+
         <!-- search bar here and other things like loopnet.com -->
+        <div class="wrapper indexPage">
+      		<div class="mainSection">
+      			<div class="searchContainer">
+      				 <form action="search.php" method="GET">	
+
+      					<input class="searchBox" type="text" name="term" placeholder="Enter location">
+      					<input class="searchButton" type="submit" value="Search">
+
+      				</form>
+      			</div>
+      		</div>
+      	</div>
+
         <section class="keds container">
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
