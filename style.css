@@ -87,6 +87,7 @@ footer {
   }
 }
 
+/* Home page seach bar styling */
 .wrapper {
 	display: flex;				
   flex-direction: column;
@@ -143,4 +144,68 @@ footer {
   width: 70%;
   max-width: 630px;
   color: #000;
+}
+
+
+.header{
+	border-bottom: 1px solid #ececec;
+}
+
+.wrapper .headerContent{
+	display: flex;
+	align-items: center;
+}
+
+.headerContent .logoContainer{
+	width: 100px;
+	padding: 5px 20px;
+	box-sizing: border-box;			
+}
+
+.logoContainer img {
+    width: 100%;
+}
+
+.headerContent .searchContainer {
+	flex: 1;
+}
+
+.headerContent .searchContainer form {
+	margin: 15px 0 28px 0;
+}
+
+
+.headerContent .searchBarContainer{
+	height: 35px;
+	border-radius: 20px;
+	background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	width: 70%;
+	max-width: 630px;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.headerContent .searchBarContainer .searchBox{
+	flex: 1;
+	border: none;
+	background-color: transparent;
+	padding: 12px;
+	font-size: 16px;
+	color: black;
+}
+
+.headerContent .searchBarContainer .searchButton{
+	background-color: white;
+	height: 35px;
+	margin-top: 0;
+	width: 35px;
+	padding-right: 20px;
+	padding-top: 5px;
+	display: flex;
+	justify-container: center;
+}
+
+.headerContent .searchBarContainer .searchButton img{
+	width: 22px;
 }
