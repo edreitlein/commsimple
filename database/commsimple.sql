@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 02, 2022 at 01:24 AM
+-- Generation Time: Apr 04, 2022 at 06:53 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -44,8 +44,9 @@ CREATE TABLE `listings` (
 --
 
 INSERT INTO `listings` (`listingID`, `user_id`, `timeListed`, `addressStreet`, `addressCity`, `addressState`, `addressZipcode`, `saleType`, `description`) VALUES
-(2, 1, '2022-04-01 23:42:28', 'trew', 'trew', 'AZ', 'trew', 'Auction', 'trew'),
-(3, 1, '2022-04-01 23:48:23', '4', '13', 'AK', '4321', 'Lease', '4321234');
+(6, 1, '2022-04-04 05:09:55', '15 Perch Ave', 'Wood Hills', 'CT', '01701', 'Sale', 'Parking, Bathroom on site'),
+(7, 1, '2022-04-04 05:11:34', 'Example Ave', 'Example City', 'AL', '00000', 'Rent', 'Example'),
+(8, 1, '2022-04-04 14:34:34', '143', 'test', 'DE', 'test', 'Sale', 'test');
 
 -- --------------------------------------------------------
 
@@ -96,7 +97,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `listings`
 --
 ALTER TABLE `listings`
-  MODIFY `listingID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'listing id autoincrements', AUTO_INCREMENT=4;
+  MODIFY `listingID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'listing id autoincrements', AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
