@@ -7,22 +7,9 @@
 
 include "./databaseInit.php";
 include "./commSimpleHeader.php";
-// this page should take listing information and upload it to the database
 
-//database fields
-/*
-listingID
-user_id
-timeListed
-addressStreet
-addressCity
-addressState
-addressZipcode
-saleType
-description
-*/
-session_start();
-if($_SESSION['loggedIn']!=true){
+session_start(); 
+if($_SESSION['loggedIn']!=true){ //do not allow a user to upload a listing if they are logged in, redirects to login page
     header('Location: ./login.php');
 
 }
@@ -30,27 +17,23 @@ if($_SESSION['loggedIn']!=true){
 
 
 if($_POST["submit"]==true){         //when submit button is pressed
-    // echo '<script type="text/javascript">
-    //     alert("good to submit");
-    //     </script>';
+    //submits listing info to database
+    
     //                                     int        text         text        text        text            text    longtext
     $insertQuery = "INSERT INTO listings (user_id,addressStreet,addressCity,addressState,addressZipcode,saleType,description) VALUES (?,?,?,?,?,?,?)";//may have to work with current_timestamp
     $stmd = $mysqli->prepare($insertQuery);
     $stmd->bind_param("issssss",$_SESSION['user_id'],$_POST["addressStreet"],$_POST["addressCity"],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description']);
-    if($stmd->execute()){ //removed for testing
+    if($stmd->execute()){ 
         echo '<script>alert("listing uploaded!")</script>';
-    //    header('Location: ./home.php'); // testing/depreciated
 
     }else{
         echo "<br>Failed<br>Contact local admin<br>";
         echo($stmd->error);
     }
-
+    //prepaired query, stores the listing ID in $_SESSION once it is uploaded
     $getListingID="SELECT * FROM listings WHERE user_id=? AND addressStreet=? AND addressCity=? AND addressState=? AND addressZipcode=? AND saleType=? AND description=?";
-    //  AND addressCity=? AND addressState=? AND addressZipcode=? AND saleType=? AND description=?
     $stmd=$mysqli->prepare($getListingID);
     $stmd->bind_param('issssss',$_SESSION['user_id'],$_POST["addressStreet"],$_POST['addressCity'],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description']);
-    // ,$_POST["addressCity"],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description']
     $stmd->execute();
     $result=$stmd->get_result();
     
@@ -86,22 +69,7 @@ if($_POST["submit"]==true){         //when submit button is pressed
         }
     }
     
-    //testing code
-    // echo("<htlm><br></html>");
-    // echo(count($_FILES['files']['name']));
-    // $filesUploadedCount = count($_FILES['files']['name']);
-    // echo("<htlm><br></html>");
-
-    // foreach($_FILES['files'] as $file){
-    //     var_dump($file)
-    // echo("<htlm><br></html>");
-
-    // }
-    // foreach($_FILES['files']['name'] as $file){
-    //     var_dump($file);
-    // echo("<htlm><br></html>");
-
-    // }
+    
 
 }
 ?>
@@ -183,7 +151,6 @@ if($_POST["submit"]==true){         //when submit button is pressed
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select><br>
-                        <!-- <input type="text" name="addressState" placeholder="State" id='addressState'><br> -->
                         <label>Area Code: </label>
                         <input type='text' name='addressZipcode' placeholder='00000' id='addressZipcode' required><br>
                         <label>Sale Type: </label>
@@ -193,10 +160,8 @@ if($_POST["submit"]==true){         //when submit button is pressed
                             <option value="Rent">Rent</option>
                             <option value="Lease">Lease</option>
                         </select><br>
-                        <!-- <input type="text" name="saleType" placeholder="Sale Type" id='saleType'><br> -->
                         <label>Description:</label><br>
                         <textarea id='description' name='description' rows='10' cols='50' placeholder='Suggestions: Additional Facilities, Parking, Proximity to Main Roads, Property Taxes, ect.'></textarea><br>
-                        <!-- <input type="text" name="description" placeholder="Description" id='description'><br> -->
 
 
                         <!-- image uploading -->
@@ -206,9 +171,6 @@ if($_POST["submit"]==true){         //when submit button is pressed
                         
                         
                         <input type="submit" value="Submit" name="submit" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
-                        <!-- <input type="button" name="submitButton" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" 
-                        value="Submit" onclick=check()></button>name of button cannot be submit - -->
-                        <!-- <input type="submit" name="submit" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"> -->
             </form>
         </div>
         </body>
