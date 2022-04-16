@@ -9,7 +9,7 @@
     <meta name="description" content="Rethouse - Real Estate HTML Template">
     <meta name="keywords" content="Real Estate, Property, Directory Listing, Marketing, Agency" />
     <meta name="author" content="mardianto - retenvi.com">
-    <title>Rethouse - Real Estate HTML Template</title>
+    <title>Login - Outwyrd Commerical Simple</title>
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />

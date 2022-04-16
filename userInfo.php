@@ -1,4 +1,9 @@
-<?php include "./commSimpleHeader.php" ?>
+<?php 
+
+
+// include "./commSimpleHeader.php"
+include "newHeader.php"
+?>
 <?php
 session_start();
 if($_SESSION['loggedIn']!=true){//redirect user if they are not logged in
