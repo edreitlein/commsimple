@@ -9,10 +9,9 @@ session_start();
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Rethouse - Real Estate HTML Template">
+<meta name="description" content="Outwyrd - Commercial Simple">
 <meta name="keywords" content="Real Estate, Property, Directory Listing, Marketing, Agency" />
 <meta name="author" content="mardianto - retenvi.com">
-<!-- <title>Rethouse - Real Estate HTML Template</title> -->
 
 <!-- Facebook and Twitter integration -->
 <meta property="og:title" content="" />

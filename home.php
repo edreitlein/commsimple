@@ -50,12 +50,8 @@
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> About </a>
                             <ul class="dropdown-menu animate fade-up">
 
-                                <li><a class="dropdown-item icon-arrow" href="#"> About </a>
-                                    <ul class="submenu dropdown-menu  animate fade-up">
-                                        <li><a class="dropdown-item" href="/listing-style-v1.html"> Find a Broker </a></li>
-                                        <li><a class="dropdown-item" href="/listing-style-v2.html"> Find Specific Listings </a></li>
-                                        <li><a class="dropdown-item" href="/listing-style-v2.html"> Login </a></li>
-                                        <li><a class="dropdown-item" href="/listing-style-v2.html"> Register </a></li>
+                                <li><a class="dropdown-item" href="#"> View Listings </a>
+                                <li><a class="dropdown-item" href="#"> Upload Listings </a>
                             </ul>
                         </li>
                     </li>
@@ -74,8 +70,7 @@
                     <!-- Search bar.// -->
                     <ul class="navbar-nav ">
                         <li>
-                            <a href="#" class="btn btn-primary text-capitalize">
-                                <i class="fa fa-plus-circle mr-1"></i> add listing</a>
+                                <button onclick="window.location.href='uploadListing.php'">Add Listing</button>
                         </li>
                     </ul>
                     <!-- Search content bar.// -->
