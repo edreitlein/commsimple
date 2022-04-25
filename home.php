@@ -1,3 +1,6 @@
+
+<?php include "./databaseInit.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,34 +46,16 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav99">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="main_nav99">
-                    <ul class="navbar-nav mx-auto ">
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> About </a>
-                            <ul class="dropdown-menu animate fade-up">
-
-                                <li><a class="dropdown-item" href="#"> View Listings </a>
-                                <li><a class="dropdown-item" href="#"> Upload Listings </a>
-                            </ul>
-                        </li>
-                    </li>
 
 
                 </ul>
-                        <li class="nav-item"><a class="nav-link" href="file:///Users/kaylie/Desktop/outwyrd/PROPERTY/blog.html"> Blogs </a></li>
-                    </ul>
-
-                        </li>
-                    </ul>
-                        <li class="nav-item"><a class="nav-link" href="file:///Users/kaylie/Desktop/outwyrd/PROPERTY/contact.html"> Contact </a></li>
-                    </ul>
 
 
                     <!-- Search bar.// -->
                     <ul class="navbar-nav ">
                         <li>
-                                <button onclick="window.location.href='uploadListing.php'">Add Listing</button>
+                        <a href="uploadListing.php" class="btn btn-primary text-uppercase ">add listing
+                            </i></a>
                         </li>
                     </ul>
                     <!-- Search content bar.// -->
@@ -418,7 +403,7 @@
                             contact
                             team
                             walls real estate and get this offer promo</p>
-                        <a href="#" class="btn btn-primary text-uppercase ">request a quote
+                        <a href="https://www.outwyrd.com/" class="btn btn-primary text-uppercase ">request a quote
                             <i class="fa fa-angle-right ml-3 arrow-btn "></i></a>
                     </div>
                 </div>

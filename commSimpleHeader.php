@@ -31,7 +31,7 @@ session_start();
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid">
                          <!-- Where is store search to user -->
-                        <a class="navbar-brand" href="#main_home"> <img src="assets/logo.PNG" width="55"
+                        <a class="navbar-brand" href="#main_home"> <img src="assets/logo.PNG" width="5"
                                 class="pb-1 mx-2"><span class="highlight" class="px-1">Commercial Simple</span>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

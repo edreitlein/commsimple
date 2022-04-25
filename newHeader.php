@@ -48,8 +48,6 @@ session_start();
                     <div class="col-sm-12 col-md-7">
                         <div class="list-unstyled topbar-right">
                             <ul class="topbar-link">
-                                <li><a href="#" title="">Career</a></li>
-                                <li><a href="#" title="">Contact Us</a></li>
                                 <li>
                                     
                                 
