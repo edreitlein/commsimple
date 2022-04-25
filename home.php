@@ -43,46 +43,16 @@
                     <img src="images/Outward_logo.png" alt="">
                     <img src="images/Outward_logo.png" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav99">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
 
                 </ul>
 
-
-                    <!-- Search bar.// -->
                     <ul class="navbar-nav ">
                         <li>
                         <a href="uploadListing.php" class="btn btn-primary text-uppercase ">add listing
                             </i></a>
                         </li>
                     </ul>
-                    <!-- Search content bar.// -->
-                    <div class="top-search navigation-shadow">
-                        <div class="container">
-                            <div class="input-group ">
-                                <form action="#">
-
-                                    <div class="row no-gutters mt-3">
-                                        <div class="col">
-                                            <input class="form-control border-secondary border-right-0 rounded-0"
-                                                type="search" value="" placeholder="Search " id="example-search-input4">
-                                        </div>
-                                        <div class="col-auto">
-                                            <a class="btn btn-outline-secondary border-left-0 rounded-0 rounded-right"
-                                                href="/search-result.html">
-                                                <i class="fa fa-search"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Search content bar.// -->
-                </div> <!-- navbar-collapse.// -->
+ 
             </div>
         </nav>
         <!-- END NAVBAR -->
@@ -103,7 +73,6 @@
                                 <div class="wrapper__section__components">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <!-- <h3 class="section_heading mt-4">Form Search with Categories</h3> -->
                                             <div class=" search__container">
                                                 <div class="row input-group no-gutters">
                                                     <div class="col-sm-12 col-md-5">
@@ -117,12 +86,9 @@
                                                         <select class="select_option form-control" name="select"
                                                             id="categories">
                                                             <option selected>All Categories</option>
-                                                            <option>House</option>
-                                                            <option>Apartement </option>
-                                                            <option>Hotel</option>
-                                                            <option>Residential</option>
-                                                            <option>Land</option>
-                                                            <option>Luxury</option>
+                                                            <option>Apartment Building</option>
+                                                            <option>Storage Unit</option>
+                                                            <option>Office Building</option>
 
                                                         </select>
 
