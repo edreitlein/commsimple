@@ -20,9 +20,9 @@ if($_POST["submit"]==true){         //when submit button is pressed
     //submits listing info to database
     
     //                                     int        text         text        text        text            text    longtext
-    $insertQuery = "INSERT INTO listings (user_id,addressStreet,addressCity,addressState,addressZipcode,saleType,description) VALUES (?,?,?,?,?,?,?)";//may have to work with current_timestamp
+    $insertQuery = "INSERT INTO listings (user_id, addressStreet,addressCity,addressState,addressZipcode,saleType,description,listingName) VALUES (?,?,?,?,?,?,?,?)";//may have to work with current_timestamp
     $stmd = $mysqli->prepare($insertQuery);
-    $stmd->bind_param("issssss",$_SESSION['user_id'],$_POST["addressStreet"],$_POST["addressCity"],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description']);
+    $stmd->bind_param("isssssss",$_SESSION['user_id'],$_POST["addressStreet"],$_POST["addressCity"],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description'],$_POST['listingName']);
     if($stmd->execute()){ 
         echo '<script>alert("listing uploaded!")</script>';
 
@@ -31,9 +31,9 @@ if($_POST["submit"]==true){         //when submit button is pressed
         echo($stmd->error);
     }
     //prepaired query, stores the listing ID in $_SESSION once it is uploaded
-    $getListingID="SELECT * FROM listings WHERE user_id=? AND addressStreet=? AND addressCity=? AND addressState=? AND addressZipcode=? AND saleType=? AND description=?";
+    $getListingID="SELECT * FROM listings WHERE user_id=? AND addressStreet=? AND addressCity=? AND addressState=? AND addressZipcode=? AND saleType=? AND description=? AND listingName=?";
     $stmd=$mysqli->prepare($getListingID);
-    $stmd->bind_param('issssss',$_SESSION['user_id'],$_POST["addressStreet"],$_POST['addressCity'],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description']);
+    $stmd->bind_param('isssssss',$_SESSION['user_id'],$_POST["addressStreet"],$_POST['addressCity'],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description'], $_POST['listingName']);
     $stmd->execute();
     $result=$stmd->get_result();
     
@@ -92,13 +92,15 @@ if($_POST["submit"]==true){         //when submit button is pressed
         
         <div class='upload'>
             <form action="<?php $_PHP_SELF ?>", id='uploadListing' method="POST" enctype="multipart/form-data">
-                        <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Upload Listing</label><br>
+                        <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><b>LISTING INFORMATION</b></label><br>
+                        <label>Listing Name: </label>
+                        <input type="text" name="listingName" placeholder="Listing Name" id='listingName' required><br>
                         <label>Street Address: </label>
                         <input type="text" name="addressStreet" placeholder="Street Address" id='addressStreet' required><br>
                         <label>City: </label>
                         <input type="text" name="addressCity" placeholder="City" id='addressCity' required><br>
                         <label>State: </label>
-                        <select name='addressState' id='addressState' reqired>
+                        <select name='addressState' id='addressState' required>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>

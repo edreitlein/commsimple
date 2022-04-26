@@ -7,13 +7,14 @@ if(isset($_GET)){
         $listingQuery = "SELECT * FROM listings WHERE listingID=?";
         $stmd=$mysqli->prepare($listingQuery);
         $stmd->bind_param('i',$_GET['listingID']);
-
+        $id = $_GET['listingID'];
         
         $stmd->execute();
         $result=$stmd->get_result();
         
         while($row = $result->fetch_assoc()) {
             $timeListed=$row['timeListed'];
+            $nameListing=$row['listingName'];
             $addressStreet=$row['addressStreet'];
             $addressCity=$row['addressCity'];
             $addressState=$row['addressState'];
@@ -101,8 +102,6 @@ if(isset($_GET)){
             </div>
         </nav>
         <!-- END NAVBAR -->
-        <!-- BREADCRUMB -->
-        <!-- BREADCRUMB -->
         <section class="section__breadcrumb ">
             <div class="container">
                 <div class="row d-flex justify-content-center">
@@ -120,7 +119,6 @@ if(isset($_GET)){
                 </div>
             </div>
         </section>
-        <!-- END BREADCRUMB -->
         <!-- END BREADCRUMB -->
     </header>
     <div class="clearfix"></div>
@@ -143,7 +141,7 @@ if(isset($_GET)){
                                     <div class="price">
                                         <h5 class="text-capitalize">$13,000/mo</h5>
                                     </div>
-                                    <h4 class="text-capitalize">Luxury Family Home</h4>
+                                    <h4 class="text-capitalize"><p><?php echo $nameListing?></p></h4>
 
                                 </div>
 
@@ -168,7 +166,7 @@ if(isset($_GET)){
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <figure>
                                         <img src="images/80x80.jpg" alt="" class="img-fluid">
@@ -182,22 +180,6 @@ if(isset($_GET)){
                                 </div>
                             </div>
 
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
-                                <div class="description">
-                                    <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
-                                    </figure>
-                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                    <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
-                                    </div>
-                                    <h4 class="text-capitalize">Luxury Family Home</h4>
-
-                                </div>
-                            </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
@@ -244,37 +226,6 @@ if(isset($_GET)){
                                     </div>
                                     <h4 class="text-capitalize">Luxury Family Home</h4>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
-                                <div class="description">
-                                    <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
-                                    </figure>
-                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                    <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
-                                    </div>
-                                    <h4 class="text-capitalize">Luxury Family Home</h4>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
-                                <div class="description">
-                                    <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
-                                    </figure>
-                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                    <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
-                                    </div>
-                                    <h4 class="text-capitalize">Luxury Family Home</h4>
                                     <!-- <p class="text-uppercase">
                     166 welling street, collingwood, vic 3066
                 </p> -->
@@ -372,7 +323,7 @@ if(isset($_GET)){
                                 echo $description;
                                 ?>
                                     
-
+                                <li>
                                     <a href="javascript:void(0)" class="show__more-button ">read more</a>
                                 </div>
                             </div>
@@ -512,17 +463,15 @@ if(isset($_GET)){
                                 <div class="profile__agent__header">
                                     <div class="profile__agent__header-avatar">
                                         <figure>
-                                            <img src="images/80x80.jpg" alt="" class="img-fluid">
+                                            <img src="images/Outward_logo.png" alt="" class="img-fluid">
                                         </figure>
 
                                         <ul class="list-unstyled mb-0">
                                             <li>
-                                                <h5 class="text-capitalize">John Doe</h5>
+                                                <h5 class="text-capitalize">Outwyrd Contact Support</h5>
                                             </li>
                                             <li><a href="tel:123456"><i
                                                         class="fa fa-phone-square mr-1"></i>(123)456-7890</a></li>
-                                            <li><a href="javascript:void(0)"><i class=" fa fa-building mr-1"></i>
-                                                    Company name</a>
                                             </li>
                                             <li> <a href="javascript:void(0)" class="text-primary">View My Listing</a>
                                             </li>
