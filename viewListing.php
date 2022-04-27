@@ -21,6 +21,7 @@ if(isset($_GET)){
             $addressZipcode=$row['addressZipcode'];
             $saleType=$row['saleType'];
             $description=$row['description'];
+            $price=$row['price'];
             
             
         }
@@ -40,15 +41,10 @@ if(isset($_GET)){
         //     }
         // }
 
-    
-    
 }else{
     //if a user gets to this page without clicking, redirect them?
     header("Location: ./listings.php");
 }
-
-
-
 
 ?>
 
@@ -134,18 +130,11 @@ if(isset($_GET)){
                             <div class="slider__image__detail-large-one">
                                 <img src="listingImages/3/download.jpg" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
-                                    <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
-                                    </figure>
                                     <span class="badge badge-primary text-capitalize mb-2">Listing</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize"><?php echo $addressStreet ?></h5>
                                     </div>
-                                    <h4 class="text-capitalize">
-                                    <?php
-
-                                echo $nameListing;
-                                    ?>
+                                    <h4> <?php echo $price ?>.00/month
                                     </h4>
 
                                 </div>
@@ -156,85 +145,15 @@ if(isset($_GET)){
                             <div class="slider__image__detail-large-one">
                                 <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
-                                    <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
-                                    </figure>
-                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
+                                    <span class="badge badge-primary text-capitalize mb-2">Listing</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
+                                        <h5 class="text-capitalize"><?php echo $price ?></h5>
                                     </div>
-                                    <h4 class="text-capitalize">Luxury Family Home</h4>
+                                    <h4 class="text-capitalize"> <?php echo $addressStreet ?>
+                                    </h4>
 
                                 </div>
-
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-large-one">
-                                <img src="" alt="" class="img-fluid w-100 img-transition">
-                                <div class="description">
-                                    <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
-                                    </figure>
-                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                    <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
-                                    </div>
-                                    <h4 class="text-capitalize">Luxury Family Home</h4>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
-                                <div class="description">
-                                    <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
-                                    </figure>
-                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                    <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
-                                    </div>
-                                    <h4 class="text-capitalize">Luxury Family Home</h4>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
-                                <div class="description">
-                                    <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
-                                    </figure>
-                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                    <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
-                                    </div>
-                                    <h4 class="text-capitalize">Luxury Family Home</h4>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
-                                <div class="description">
-                                    <figure>
-                                        <img src="images/80x80.jpg" alt="" class="img-fluid">
-                                    </figure>
-                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
-                                    <div class="price">
-                                        <h5 class="text-capitalize">$13,000/mo</h5>
-                                    </div>
-                                    <h4 class="text-capitalize">Luxury Family Home</h4>
-
-                                    <!-- <p class="text-uppercase">
-                    166 welling street, collingwood, vic 3066
-                </p> -->
-                                </div>
+                        
                             </div>
                         </div>
                     </div>
@@ -290,16 +209,25 @@ if(isset($_GET)){
                     <div class="row">
                         <div class="col-md-9 col-lg-9">
                             <div class="single__detail-title mt-4">
-                                <h3 class="text-capitalize">Luxury Family Home</h3>
-                                <p> <?php
+                                <h3 class="text-capitalize"><?php echo $nameListing ?></h3>
+                                <p class='text-capitalize'> <?php
 
                                     echo $addressStreet;
-            ?></p>
+                                     ?></p>
+                                        <p class='text-capitalize'> <?php
+                                     echo $addressCity ?>, <?php echo $addressState ?>
+                                     </p>
                             </div>
                         </div>
                         <div class="col-md-3 col-lg-3">
                             <div class="single__detail-price mt-4">
-                                <h3 class="text-capitalize text-gray">$13.000/mo</h3>
+                                <h3 class="text-capitalize text-black">
+                    
+                                <?php
+                                echo $price;
+                                ?>
+
+                                </h3>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
                                         <a href="#" class="badge badge-primary p-2 rounded"><i
@@ -311,7 +239,7 @@ if(isset($_GET)){
                                     </li>
 
                                     <li class="list-inline-item">
-                                        <a href="#" class="badge badge-primary p-2 rounded"><i
+                                        <a href="" class="badge badge-primary p-2 rounded"><i
                                                 class="fa fa-heart"></i></a>
                                     </li>
                                 </ul>

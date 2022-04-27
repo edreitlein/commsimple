@@ -181,7 +181,7 @@ if($_POST["submit"]==true){         //when submit button is pressed
                             <option value="Lease">Lease</option>
                         </select><br>
                         <label>Price: </label>
-                        <input type='integer' name='price' placeholder='0000' id='price' required><br>
+                        <input type='float' name='price' placeholder='00.00' id='price' required><br>
                         <label>Description:</label><br>
                         <textarea id='description' name='description' rows='10' cols='50' placeholder='Suggestions: Additional Facilities, Parking, Proximity to Main Roads, Property Taxes, ect.'></textarea><br>
 
