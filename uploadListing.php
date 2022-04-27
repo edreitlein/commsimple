@@ -1,12 +1,12 @@
+
+<?php include "./newHeader.php" ?>
 <?php
 // these are debugging settings, enable them to begin debugging this page
 // ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 
-
 include "./databaseInit.php";
-include "./commSimpleHeader.php";
 
 session_start(); 
 if($_SESSION['loggedIn']!=true){ //do not allow a user to upload a listing if they are logged in, redirects to login page
@@ -80,6 +80,9 @@ if($_POST["submit"]==true){         //when submit button is pressed
             .upload{
                 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 padding:.75rem;
+                color: white;
+                font-weight: bold;
+
 
             }
             textarea{
@@ -88,11 +91,24 @@ if($_POST["submit"]==true){         //when submit button is pressed
         </style>
 
     </header>
+
     <body>
-        
+    <header class="jumbotron bg-theme">
+        <div class="bg-overlay"></div>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-hover navbar-expand-lg navbar-soft navbar-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="file:///Users/kaylie/Desktop/outwyrd/PROPERTY/homepage-v1.html#">
+                    <img src="images/Outward_logo.png" alt="">
+                    <img src="images/Outward_logo.png" alt="">
+                </a>
+
+                </ul>
+
         <div class='upload'>
+        <li>
             <form action="<?php $_PHP_SELF ?>", id='uploadListing' method="POST" enctype="multipart/form-data">
-                        <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><b>LISTING INFORMATION</b></label><br>
+                        <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><center><b>LISTING INFORMATION</b></label></center><br>
                         <label>Listing Name: </label>
                         <input type="text" name="listingName" placeholder="Listing Name" id='listingName' required><br>
                         <label>Street Address: </label>

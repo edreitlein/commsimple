@@ -10,8 +10,8 @@ session_start();
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Outwyrd - Commercial Simple">
-<meta name="keywords" content="Real Estate, Property, Directory Listing, Marketing, Agency" />
-<meta name="author" content="mardianto - retenvi.com">
+<meta name="keywords" content="Outwyrd - Commercial Simple" />
+<meta name="author" content="">
 
 <!-- Facebook and Twitter integration -->
 <meta property="og:title" content="" />
@@ -64,19 +64,6 @@ session_start();
                                     }
 
                                 ?>
-                            
-                                </li>
-                            </ul>
-                            <ul class="topbar-sosmed">
-                                <li>
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                </li>
                             </ul>
                         </div>
                     </div>

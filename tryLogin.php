@@ -38,9 +38,10 @@ if($users->num_rows>0){
             // //     echo "<br>Failed<br>Contact local admin<br>";
             // // }
 
-            header('Location: ./tempsuccess.html');
-
-
+            echo '<script type="text/javascript">
+            alert("LOGIN SUCCESSFUL!");
+            window.location.replace("./home.php");
+            </script>';
             
             
         }

@@ -476,8 +476,6 @@ if(isset($_GET)){
                                             <li> <a href="javascript:void(0)" class="text-primary">View My Listing</a>
                                             </li>
                                         </ul>
-
-
                                     </div>
 
                                 </div>
