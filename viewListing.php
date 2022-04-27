@@ -128,7 +128,7 @@ if(isset($_GET)){
                     <div class="slider__image__detail-large owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="listingImages/3/download.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="listingImages/14/apt.jpg" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <span class="badge badge-primary text-capitalize mb-2">Listing</span>
                                     <div class="price">
@@ -143,13 +143,13 @@ if(isset($_GET)){
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="images/1920x1080.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="listingImages/14/invest.jpg" alt="" class="img-fluid w-100 img-transition">
                                 <div class="description">
-                                    <span class="badge badge-primary text-capitalize mb-2">Listing</span>
+                                <span class="badge badge-primary text-capitalize mb-2">Listing</span>
                                     <div class="price">
-                                        <h5 class="text-capitalize"><?php echo $price ?></h5>
+                                        <h5 class="text-capitalize"><?php echo $addressStreet ?></h5>
                                     </div>
-                                    <h4 class="text-capitalize"> <?php echo $addressStreet ?>
+                                    <h4> <?php echo $price ?>.00/month
                                     </h4>
 
                                 </div>
@@ -161,47 +161,24 @@ if(isset($_GET)){
                     <div class="slider__image__detail-thumb owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="listingImages/14/download.jpg" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="listingImages/14/-1x-1.jpg" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="listingImages/14/invest.jpg" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="listingImages/14/build.jpg" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="slider__image__detail-thumb-one">
-                                <img src="images/600x400.jpg" alt="" class="img-fluid w-100 img-transition">
                             </div>
                         </div>
                     </div>
