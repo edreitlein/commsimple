@@ -20,9 +20,9 @@ if($_POST["submit"]==true){         //when submit button is pressed
     //submits listing info to database
     
     //                                     int        text         text        text        text            text    longtext
-    $insertQuery = "INSERT INTO listings (user_id, addressStreet,addressCity,addressState,addressZipcode,saleType,description,listingName) VALUES (?,?,?,?,?,?,?,?)";//may have to work with current_timestamp
+    $insertQuery = "INSERT INTO listings (user_id, addressStreet,addressCity,addressState,addressZipcode,saleType,description, nameListing, price) VALUES (?,?,?,?,?,?,?,?,?)";//may have to work with current_timestamp
     $stmd = $mysqli->prepare($insertQuery);
-    $stmd->bind_param("isssssss",$_SESSION['user_id'],$_POST["addressStreet"],$_POST["addressCity"],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description'],$_POST['listingName']);
+    $stmd->bind_param("isssssssi",$_SESSION['user_id'],$_POST["addressStreet"],$_POST["addressCity"],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description'],$_POST['nameListing'], $_POST['price']);
     if($stmd->execute()){ 
         echo '<script>alert("listing uploaded!")</script>';
 
@@ -31,9 +31,9 @@ if($_POST["submit"]==true){         //when submit button is pressed
         echo($stmd->error);
     }
     //prepaired query, stores the listing ID in $_SESSION once it is uploaded
-    $getListingID="SELECT * FROM listings WHERE user_id=? AND addressStreet=? AND addressCity=? AND addressState=? AND addressZipcode=? AND saleType=? AND description=? AND listingName=?";
+    $getListingID="SELECT * FROM listings WHERE user_id=? AND addressStreet=? AND addressCity=? AND addressState=? AND addressZipcode=? AND saleType=? AND description=? AND nameListing=? AND price=?";
     $stmd=$mysqli->prepare($getListingID);
-    $stmd->bind_param('isssssss',$_SESSION['user_id'],$_POST["addressStreet"],$_POST['addressCity'],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description'], $_POST['listingName']);
+    $stmd->bind_param('isssssssi',$_SESSION['user_id'],$_POST["addressStreet"],$_POST['addressCity'],$_POST['addressState'],$_POST['addressZipcode'],$_POST['saleType'],$_POST['description'], $_POST['nameListing'], $_POST['price']);
     $stmd->execute();
     $result=$stmd->get_result();
     
@@ -82,6 +82,8 @@ if($_POST["submit"]==true){         //when submit button is pressed
                 padding:.75rem;
                 color: white;
                 font-weight: bold;
+                font-size: 15px;
+                position: relative;
 
 
             }
@@ -94,13 +96,13 @@ if($_POST["submit"]==true){         //when submit button is pressed
 
     <body>
     <header class="jumbotron bg-theme">
-        <div class="bg-overlay"></div>
+    <div class="bg-overlay"></div>
         <!-- NAVBAR -->
         <nav class="navbar navbar-hover navbar-expand-lg navbar-soft navbar-transparent">
             <div class="container">
-                <a class="navbar-brand" href="file:///Users/kaylie/Desktop/outwyrd/PROPERTY/homepage-v1.html#">
-                    <img src="images/Outward_logo.png" alt="">
-                    <img src="images/Outward_logo.png" alt="">
+                <a class="navbar-brand" href="home.php">
+                    <img src="images/Outward_logo.png"  width='300' height='300'>
+                    <img src="images/Outward_logo.png"  width='300' height='300'>
                 </a>
 
                 </ul>
@@ -110,7 +112,7 @@ if($_POST["submit"]==true){         //when submit button is pressed
             <form action="<?php $_PHP_SELF ?>", id='uploadListing' method="POST" enctype="multipart/form-data">
                         <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><center><b>LISTING INFORMATION</b></label></center><br>
                         <label>Listing Name: </label>
-                        <input type="text" name="listingName" placeholder="Listing Name" id='listingName' required><br>
+                        <input type="text" name="nameListing" placeholder="Listing Name" id='nameListing' required><br>
                         <label>Street Address: </label>
                         <input type="text" name="addressStreet" placeholder="Street Address" id='addressStreet' required><br>
                         <label>City: </label>
@@ -178,6 +180,8 @@ if($_POST["submit"]==true){         //when submit button is pressed
                             <option value="Rent">Rent</option>
                             <option value="Lease">Lease</option>
                         </select><br>
+                        <label>Price: </label>
+                        <input type='integer' name='price' placeholder='0000' id='price' required><br>
                         <label>Description:</label><br>
                         <textarea id='description' name='description' rows='10' cols='50' placeholder='Suggestions: Additional Facilities, Parking, Proximity to Main Roads, Property Taxes, ect.'></textarea><br>
 

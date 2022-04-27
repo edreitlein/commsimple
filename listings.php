@@ -1,10 +1,10 @@
-<?php include "./commSimpleHeader.php" ?>
+<?php include "./newHeader.php" ?>
 <?php include "./databaseInit.php" ?>
 <html>
     <header>
         <style>
             .centerView{
-                /* background-color: lightblue; */
+                background-color: white; 
                 position:relative;
                 /* top:40%; */
                 /* top:30%;
@@ -48,7 +48,7 @@ if($listings->num_rows>0){
         echo('
         
         <div class="listing">
-        Address: '.$row['addressStreet'].', '.$row['addressCity'].', '.$row['addressState'].', '.$row['addressZipcode']);
+        <b>Address:</b> '.$row['addressStreet'].', '.$row['addressCity'].', '.$row['addressState'].', '.$row['addressZipcode']);
 
         echo "<br>
         <button onClick=javascript:window.location.href='./viewListing.php?listingID=$listingID'>View Listing</button></div><br>

@@ -40,7 +40,7 @@ if($users->num_rows>0){
 
             echo '<script type="text/javascript">
             alert("LOGIN SUCCESSFUL!");
-            window.location.replace("./home.php");
+            window.location.replace("./userInfo.php");
             </script>';
             
             

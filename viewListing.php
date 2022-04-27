@@ -137,11 +137,16 @@ if(isset($_GET)){
                                     <figure>
                                         <img src="images/80x80.jpg" alt="" class="img-fluid">
                                     </figure>
-                                    <span class="badge badge-primary text-capitalize mb-2">house</span>
+                                    <span class="badge badge-primary text-capitalize mb-2">Listing</span>
                                     <div class="price">
                                         <h5 class="text-capitalize">$13,000/mo</h5>
                                     </div>
-                                    <h4 class="text-capitalize"><p><?php echo $nameListing?></p></h4>
+                                    <h4 class="text-capitalize">
+                                    <?php
+
+                                echo $nameListing;
+                                    ?>
+                                    </h4>
 
                                 </div>
 
@@ -286,7 +291,10 @@ if(isset($_GET)){
                         <div class="col-md-9 col-lg-9">
                             <div class="single__detail-title mt-4">
                                 <h3 class="text-capitalize">Luxury Family Home</h3>
-                                <p> 166 welling street, collingwood, vic 3066</p>
+                                <p> <?php
+
+                                    echo $addressStreet;
+            ?></p>
                             </div>
                         </div>
                         <div class="col-md-3 col-lg-3">
@@ -322,86 +330,12 @@ if(isset($_GET)){
 
                                 echo $description;
                                 ?>
-                                    
-                                <li>
+                                   <br> 
+                                <br>
                                     <a href="javascript:void(0)" class="show__more-button ">read more</a>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-
-                            <!-- PROPERTY DETAILS SPEC -->
-                            <div class="single__detail-features">
-                                <h6 class="text-capitalize detail-heading">property details</h6>
-                                <!-- INFO PROPERTY DETAIL -->
-                                <div class="property__detail-info">
-                                    <div class="row">
-                                        <div class="col-md-6 col-lg-6">
-                                            <ul class="property__detail-info-list list-unstyled">
-                                                <li><b>Property ID:</b> RV151</li>
-                                                <li><b>Price:</b> $484,400</li>
-                                                <li><b>Property Size:</b> 1466 Sq Ft</li>
-                                                <li><b>Bedrooms:</b> 4</li>
-                                                <li><b>Bathrooms:</b> 2</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6">
-                                            <ul class="property__detail-info-list list-unstyled">
-                                                <li><b>Garage:</b> 1</li>
-                                                <li><b>Garage Size:</b> 458 SqFt</li>
-                                                <li><b>Year Built:</b> 2019-01-09</li>
-                                                <li><b>Property Type:</b> Full Family Home</li>
-                                                <li><b>Property Status:</b> For rent</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <h6 class="text-primary">Additional details</h6>
-                                    <div class="row">
-                                        <div class="col-md-6 col-lg-6">
-                                            <ul class="property__detail-info-list list-unstyled">
-                                                <li><b>Property ID:</b> RV151</li>
-                                                <li><b>Price:</b> $484,400</li>
-                                                <li><b>Property Size:</b> 1466 Sq Ft</li>
-                                                <li><b>Bedrooms:</b> 4</li>
-                                                <li><b>Bathrooms:</b> 2</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6">
-                                            <ul class="property__detail-info-list list-unstyled">
-                                                <li><b>Garage:</b> 1</li>
-                                                <li><b>Garage Size:</b> 458 SqFt</li>
-                                                <li><b>Year Built:</b> 2019-01-09</li>
-                                                <li><b>Property Type:</b> Full Family Home</li>
-                                                <li><b>Property Status:</b> For rent</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- END INFO PROPERTY DETAIL -->
-                            </div>
-                            <!-- END PROPERTY DETAILS SPEC -->
-                            <div class="clearfix"></div>
-
-                            <!-- FEATURES -->
-                            <div class="single__detail-features">
-                                <h6 class="text-capitalize detail-heading">features</h6>
-                                <ul class="list-unstyled icon-checkbox">
-                                    <li>air conditioning</li>
-                                    <li>swiming pool</li>
-                                    <li>Central Heating</li>
-                                    <li>spa & massage</li>
-                                    <li>pets allow</li>
-
-                                    <li>air conditioning</li>
-                                    <li>gym</li>
-                                    <li>alarm</li>
-
-                                    <li>window Covering</li>
-                                    <li>free wiFi</li>
-                                    <li>car parking </li>
-                                </ul>
-                            </div>
-                            <!-- END FEATURES -->
 
 
                                     </figure>
