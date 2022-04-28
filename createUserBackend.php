@@ -40,6 +40,11 @@ if((checkUniqueUser($_POST['email'],$mysqli))==true){
     // TODO: Create New User
 
     //prepared statment for adding a user
+    // echo "something here";
+    // echo "<html><br></html>";
+
+    // echo $_POST["email"];
+
     $insertQuery = "INSERT INTO users (firstName, lastName, email, password) VALUES (?,?,?,?)";
     $stmd = $mysqli->prepare($insertQuery);
     $stmd->bind_param("ssss",$_POST["firstName"],$_POST["lastName"],$_POST["email"],$_POST['password']);

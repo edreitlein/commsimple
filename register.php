@@ -1,12 +1,13 @@
 <?php
 include "newHeader.php"?>
+<script src="./scripts/checkSamePasswords.js"></script>
 
 <!-- END NAVBAR TOP -->
         <!-- NAVBAR -->
         <nav class="navbar navbar-hover navbar-expand-lg navbar-soft">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="images/logo-blue-stiky.png" alt="" class="img-fluid">
+            <img src="images/Outward_logo.png" alt="" class="img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav99">
             <span class="navbar-toggler-icon"></span>
@@ -172,68 +173,43 @@ include "newHeader.php"?>
 <div class="card mx-auto" style="max-width:520px;">
     <div class="card-body">
         <h4 class="card-title mb-4">Sign in</h4>
-        <form action="#">
+        <form action="./createUserBackend.php", id='createAccount', method="POST">
             <div class="form-row">
                 <div class="col form-group">
                     <label>First name</label>
-                    <input type="text" class="form-control" placeholder="">
+                    <input type="text" class="form-control" name="firstName" id='firstName'>
                 </div> <!-- form-group end.// -->
                 <div class="col form-group">
                     <label>Last name</label>
-                    <input type="text" class="form-control" placeholder="">
+                    <input type="text" class="form-control" name="lastName" id='lastName'>
                 </div> <!-- form-group end.// -->
             </div> <!-- form-row end.// -->
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" class="form-control" placeholder="">
+                <input type="email" class="form-control" name="email" id='email' required="required">
                 <small class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div> <!-- form-group end.// -->
-            <div class="form-group">
-                <label class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" checked="" type="radio" name="gender" value="option1">
-                    <span class="custom-control-label"> Male </span>
-                </label>
-                <label class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="gender" value="option2">
-                    <span class="custom-control-label"> Female </span>
-                </label>
-            </div> <!-- form-group end.// -->
-            <div class="form-row">
-                <div class="form-group col-lg-6">
-                    <label>City</label>
-                    <input type="text" class="form-control">
-                </div> <!-- form-group end.// -->
-                <div class="form-group col-lg-6">
-                    <label>Country</label>
-                    <select class=" form-control">
-                        <option> Choose...</option>
-                        <option>Uzbekistan</option>
-                        <option>Russia</option>
-                        <option selected="">United States</option>
-                        <option>India</option>
-                        <option>Afganistan</option>
-                    </select>
-                </div> <!-- form-group end.// -->
-            </div> <!-- form-row.// -->
+            
+            
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Create password</label>
-                    <input class="form-control" type="password">
+                    <input class="form-control" type="password" name="password" id='pass1'>
                 </div> <!-- form-group end.// -->
                 <div class="form-group col-md-6">
                     <label>Repeat password</label>
-                    <input class="form-control" type="password">
+                    <input class="form-control" type="password" name="confirmpassword" id='pass2'>
                 </div> <!-- form-group end.// -->
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block"> Register </button>
-            </div> <!-- form-group// -->
-            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-block" name="submitButton" onclick=check()> Register </button>
+            </div> 
+            <!-- <div class="form-group">
                 <label class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input"
                         checked="">
                     <span class="custom-control-label"> I am agree with <a href="#">terms and contitions</a> </span>
                 </label>
-            </div> <!-- form-group end.// -->
+            </div>  -->
         </form>
     </div><!-- card-body.// -->
 </div>
@@ -273,7 +249,7 @@ include "newHeader.php"?>
                 <div class="col-md-4">
                     <div class="widget__footer">
                         <figure>
-                            <img src="images/logo-blue.png" alt="" class="logo-footer">
+                            <img src="images/Outward_logo.png" alt="" class="logo-footer">
                         </figure>
                         <p>
                             Rethouse Real Estate is a premium Property template based on Bootstrap 4. Rethouse Real

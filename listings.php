@@ -12,6 +12,7 @@
                 left:43%;
                 padding:20px; */
                 /* width: 180px;      */
+                height:100%;
                 font-family:'Segoe UI', sans-serif;
                 text-align:center;
                 margin: 0 auto;
