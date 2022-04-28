@@ -1,3 +1,8 @@
+
+
+<?php include "./databaseInit.php" ?>
+<?php include "./newHeader.php" ?>
+
 <?php
 session_start();
 
@@ -5,10 +10,20 @@ session_start();
 <html>
     <header>
     <style>
+
+            .centerView{
+                background-color: white; 
+                background-size:cover;
+                background-image: url('images/listings.jpg');
+                position:relative;
+                font-family:'Segoe UI', sans-serif;
+                text-align:center;
+                margin: 0 auto;
+                height: cover;
+            }
             .createUserForm{
                 box-sizing: content-box;
-
-                background-color: lightblue;
+                background-color: white;
                 position:relative;
                 top:20%;
                 left:42%;
@@ -22,7 +37,6 @@ session_start();
                 border-radius: 5px;
                 overflow:hidden;
                 box-shadow: 0 0 15px rgba(0,0,0,0.15);
-
                 padding: 15ppx;
                 background: black;
             }
@@ -33,7 +47,7 @@ session_start();
     </header>
     <script src="./scripts/checkSamePasswords.js"></script>
     <body>
-        
+    <div class='centerView'>"
         <div class="createUserForm">
         <?php
                 if (($_SESSION["emailAlreadyExists"])==true){
@@ -42,7 +56,7 @@ session_start();
 
             ?>
             <form action="./createUserBackend.php", id='createAccount' method="POST" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
-                <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Create Account</label>
+                <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><b>Create Account</b></label>
                 <input type="text" name="firstName" placeholder="First Name" id='firstName'><br>
                 <input type="text" name="lastName" placeholder="Last Name" id='lastName'><br>
                 <input type="email" name="email" placeholder="Email" id='email' required="required"><br>

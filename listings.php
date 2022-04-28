@@ -5,6 +5,7 @@
         <style>
             .centerView{
                 background-color: white; 
+                background-image: url('images/listings.jpg');
                 position:relative;
                 /* top:40%; */
                 /* top:30%;
@@ -20,6 +21,8 @@
                 margin: 0 auto;
                 position:relative;
                 font-family:'Segoe UI', sans-serif;
+                color: white;
+                font-size: 18px;
                 /* outline: .5rem solid blue; */
             }
         </style>
