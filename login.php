@@ -115,7 +115,7 @@
                         </div> <!-- card-body.// -->
                     </div> <!-- card .// -->
 
-                    <p class="text-center mt-4">Don't have account? <a href="./createUserFrontend.php">Sign up</a></p>
+                    <p class="text-center mt-4">Don't have account? <a href="./register.php">Sign up</a></p>
                 </div>
             </div>
         </div>
