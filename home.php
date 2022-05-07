@@ -1,5 +1,9 @@
 
-<?php include "./databaseInit.php" ?>
+<?php
+
+// include "./databaseInit.php"
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
