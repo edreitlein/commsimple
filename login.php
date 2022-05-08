@@ -96,7 +96,7 @@
                                     <input class="form-control" placeholder="Email" type="text" name="email">
                                 </div> <!-- form-group// -->
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" type="text" name="password">
+                                    <input class="form-control" placeholder="Password" type="password" name="password">
                                 </div> <!-- form-group// -->
 
                                 <div class="form-group">
