@@ -26,6 +26,26 @@ if(isset($_GET)){
             
         }
 
+        $dir="./listingImages/".strval($id);
+
+
+        if(is_dir($dir)){
+            $filesInDir = scandir($dir,1);
+            if($filesInDir != false){
+            array_pop($filesInDir);
+            array_pop($filesInDir);
+            // print_r($filesInDir);
+
+            
+            }
+            foreach($filesInDir as $file){
+                // echo "<img src='$dir/$file'>";
+                $picLocation = "$dir/$file";
+                break;
+                
+            }
+        }
+
     //get pictures to display on webpage
 
         // $dir="./listingImages/".strval($_GET['listingID']);
@@ -128,7 +148,7 @@ if(isset($_GET)){
                     <div class="slider__image__detail-large owl-carousel owl-theme">
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="listingImages/14/apt.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="<?php echo $picLocation?>" alt="Image not Found!" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                     <span class="badge badge-primary text-capitalize mb-2">Listing</span>
                                     <div class="price">
@@ -143,7 +163,7 @@ if(isset($_GET)){
                         </div>
                         <div class="item">
                             <div class="slider__image__detail-large-one">
-                                <img src="listingImages/14/invest.jpg" alt="" class="img-fluid w-100 img-transition">
+                                <img src="listingImages/14/invest.jpg" alt="Image not Found!" class="img-fluid w-100 img-transition">
                                 <div class="description">
                                 <span class="badge badge-primary text-capitalize mb-2">Listing</span>
                                     <div class="price">

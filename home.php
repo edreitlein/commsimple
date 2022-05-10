@@ -62,7 +62,7 @@ include "./databaseInit.php"
         <!-- END NAVBAR -->
         <!-- HERO -->
         <div class="wrap__intro d-flex align-items-md-center ">
-            <div class="container  ">
+            <div class="container">
                 <div class="row align-items-center justify-content-start flex-wrap">
                     <div class="col-md-10 mx-auto">
                         <div class="wrap__intro-heading text-center" data-aos="fade-up">
@@ -73,40 +73,32 @@ include "./databaseInit.php"
                                 discounts</p>
 
                             <!-- SEARCH BAR -->
-                            <div class="wrapper__section">
+                            <div class="wrapper__section" >
                                 <div class="wrapper__section__components">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class=" search__container">
-                                                <div class="row input-group no-gutters">
-                                                    <div class="col-sm-12 col-md-5">
-                                                        <input type="text" class="form-control" aria-label="Text input"
-                                                            placeholder="Search for Homes by Address, City . . . .">
+                                    <div>
+                                        
+                                        
+                                            
+                                                
+                                                    <form action="./search.php", method="GET">
+                                                    <div style='display: inline-block; width:80%'>
+                                                        <input style='' type="text" class="form-control" aria-label="Text input"
+                                                            placeholder="Search for Homes by Address, City . . . ." name='searchParam' id='searchParam'>
                                                     </div>
 
 
-                                                    <div class="col-sm-12 col-md-4 input-group">
-
-                                                        <select class="select_option form-control" name="select"
-                                                            id="categories">
-                                                            <option selected>All Categories</option>
-                                                            <option>Apartment Building</option>
-                                                            <option>Storage Unit</option>
-                                                            <option>Office Building</option>
-
-                                                        </select>
-
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-3 input-group-append">
-                                                        <button class="btn btn-primary btn-block" type="submit">
+                                                    
+                                                    <div style='display: inline-block; '>
+                                                        <button class="btn btn-primary btn-block" type="submit" name = 'search' id='search'>
                                                             <i class="fa fa-search"></i> <span
                                                                 class="ml-1 text-uppercase">Search</span>
                                                         </button>
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                                    <div>
+                                                    </form>
+                                                
+                                            
+                                        
                                     </div>
                                 </div>
                             </div>
