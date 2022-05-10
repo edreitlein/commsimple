@@ -1,7 +1,6 @@
-
 <?php
 
-include "./databaseInit.php"
+include "./databaseInit.php";
 
 ?>
 
