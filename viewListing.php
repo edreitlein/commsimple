@@ -105,7 +105,7 @@ if(isset($_GET)){
         <!-- NAVBAR -->
         <nav class="navbar navbar-hover navbar-expand-lg navbar-soft navbar-transparent">
             <div class="container">
-                <a class="navbar-brand" href="/commsimple/home.php">
+                <a class="navbar-brand" href="./home.php">
                     <img src="./images/Outward_logo.png" alt="">
                     <img src="./images/Outward_logo.png" alt="">
                 </a>
