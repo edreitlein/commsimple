@@ -8,20 +8,20 @@
 
 //database for development
 
-$db_host = 'localhost';
-$db_user= 'root';
-$db_password='root';
-$db_db = 'commsimple';
-$db_port = '8889';
+// $db_host = 'localhost';
+// $db_user= 'root';
+// $db_password='root';
+// $db_db = 'commsimple';
+// $db_port = '8889';
 
 
 
 //database for deployment
-// $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-// $db_host = $cleardb_url["host"];
-// $db_user= $cleardb_url["user"];
-// $db_password=$cleardb_url["pass"];
-// $db_db = substr($cleardb_url["path"],1);
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$db_host = $cleardb_url["host"];
+$db_user= $cleardb_url["user"];
+$db_password=$cleardb_url["pass"];
+$db_db = substr($cleardb_url["path"],1);
 
 
 $mysqli = new mysqli( 
